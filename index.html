@@ -7,14 +7,56 @@
     <link rel="stylesheet" href="./commonStyle.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/aa7454d09f.js" crossorigin="anonymous"></script>
+    <style>
+        /* Mobile menu styles */
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            background-color: #333;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+        }
+        
+        .mobile-menu a {
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .mobile-menu a:hover {
+            background-color: #555;
+        }
+        
+        @media (max-width: 768px) {
+            .nav {
+                display: none;
+            }
+            .mobile-menu {
+                display: none;
+            }
+            #barContainer {
+                display: block;
+            }
+        }
+        
+        @media (min-width: 769px) {
+            #barContainer {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
-
     <!-- Header -->
     <header>
         <div id="logo">
             <a href="./index.html">
-            <img src="./img/logo-white.png" alt="">
+                <img src="./img/logo-white.png" alt="">
             </a>
         </div>
         <ul class="nav" id="nav">
@@ -23,7 +65,6 @@
                      <img src="./img/logo-white.png" alt="">
                </a>
             </ul>
-
             <li class="nav-link"><a href="./index.html">Home</a></li>
             <li class="nav-link"><a href="./aboutus.html">About Us</a></li>
             <li class="nav-link"><a href="./contact.html">Contact</a></li>
@@ -37,6 +78,25 @@
         <div id="barContainer">
             <i id="bar" class="fa-solid fa-bars"></i>
         </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="./index.html">Home</a>
+        <a href="./aboutus.html">About Us</a>
+        <a href="./contact.html">Contact</a>
+    </div>
+
+    <script>
+        document.getElementById("bar").addEventListener("click", function() {
+            var mobileMenu = document.getElementById("mobileMenu");
+            if (mobileMenu.style.display === "block") {
+                mobileMenu.style.display = "none";
+            } else {
+                mobileMenu.style.display = "block";
+            }
+        });
+    </script>
     </header>
 
     <!-- Hero page -->

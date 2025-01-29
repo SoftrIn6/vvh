@@ -87,13 +87,15 @@ p{
     margin-bottom: 3em;
 }
 
-@media screen and (min-width:800px) {
-    section{
-        width: 85%;
-    }   
-    
-    .gridSection{
-        grid-template-columns: 1fr 1fr;
+@media screen and (max-width: 799px) {
+    /* Adjust layout for small screens */
+    .menu {
+        display: block; /* If the menu is hidden by default, you can make it visible here */
+        background-color: var(--darkblue); /* For example, set a background color */
+    }
+
+    .gridSection {
+        grid-template-columns: 1fr; /* Stack items in a single column on small screens */
     }
 }
 

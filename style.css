@@ -1,30 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
 }
 
-:root{
-   --black:#000;
-   --white:#ffffff;
-   --lightgrey:#f1f1f1;
-   --darkblue:#0d102c;
-   --primarycolor:#3d51f2;
-   --secondarycolor:#5670ef;
-   --lightDark:#080A25;
-   --darkText:#8388B4;
+:root {
+    --black: #000;
+    --white: #ffffff;
+    --lightgrey: #f1f1f1;
+    --darkblue: #0d102c;
+    --primarycolor: #3d51f2;
+    --secondarycolor: #5670ef;
+    --lightDark: #080A25;
+    --darkText: #8388B4;
 }
 
-body{
+body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--darkblue);
     color: var(--white);
 }
 
 /* Header */
-header{
+header {
     width: 90%;
     max-width: 1200px;
     margin: auto;
@@ -34,13 +35,14 @@ header{
     padding: 2em 1em;
 }
 
-#barContainer{
+#barContainer {
     color: var(--white);
     font-size: 1.5rem;
     cursor: pointer;
 }
 
-.nav{
+/* Sidebar Navigation */
+.nav {
     list-style-type: none;
     color: var(--white);
     position: fixed;
@@ -53,35 +55,27 @@ header{
     align-items: center;
     width: 0;
     overflow: hidden;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     z-index: 2;
 }
+
+/* Add class to toggle menu visibility */
+.showNav {
+    width: 250px;
+    padding: 2em 1em;
+}
+
+/* Mobile Dropdown Menu */
 .mobile-nav {
-    display: none;  /* Hide by default */
+    display: none;
     position: absolute;
-    top: 60px;  /* Adjust based on your header */
+    top: 60px;
     right: 10px;
     background: #333;
     color: white;
     padding: 10px;
     border-radius: 5px;
     z-index: 1000;
-}
-
-.mobile-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.mobile-nav ul li {
-    padding: 10px;
-}
-
-.mobile-nav ul li a {
-    color: white;
-    text-decoration: none;
-    display: block;
 }
 
 @media (min-width: 768px) {  

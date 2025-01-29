@@ -1,72 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+ <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./commonStyle.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/aa7454d09f.js" crossorigin="anonymous"></script>
+    <title>Mobile Menu</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <!-- Header -->
     <header>
-        <div id="logo">
-            <a href="./index.html">
-                <img src="./img/logo-white.png" alt="Logo">
-            </a>
-        </div>
-        <ul class="nav" id="nav">
-            <li class="navLogo">
-                <a href="./index.html">
-                    <img src="./img/logo-white.png" alt="Logo">
-                </a>
-            </li>
+        <!-- Hamburger menu icon -->
+        <button class="menu-toggle" id="menuToggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
 
-            <li class="nav-link"><a href="./index.html">Home</a></li>
-            <li class="nav-link"><a href="./aboutus.html">About Us</a></li>
-            <li class="nav-link"><a href="./contact.html">Contact</a></li>
-            <li class="sociallinkContainer">
-                <img class="sociallink" src="./img/fabook-icon-white.svg" alt="Facebook">
-                <img class="sociallink" src="./img/twitter-icon-white.svg" alt="Twitter">
-                <img class="sociallink" src="./img/inkedin-icon-white.svg" alt="LinkedIn">
-                <img class="sociallink" src="./img/whatsapp-icon-white.svg" alt="WhatsApp">
-            </li>
-        </ul>
-
-       <!-- Mobile Menu -->
-<div id="mobileMenu" class="mobile-nav">
-    <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./aboutus.html">About Us</a></li>
-        <li><a href="./contact.html">Contact</a></li>
-    </ul>
-</div>
-
-<!-- Mobile Menu Toggle Button -->
-<div id="barContainer">
-    <!-- Use the provided image as the mobile button, with onClick directly in HTML -->
-    <img id="bar" src="https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_bars.svg" alt="Menu" onClick="toggleMenu()" />
-</div>
-
-<script>
-    function toggleMenu() {
-        // Toggle the mobile menu visibility
-        const mobileMenu = document.getElementById("mobileMenu");
-        mobileMenu.classList.toggle("showNav");
-
-        // Toggle the icon
-        const bar = document.getElementById("bar");
-        const iconSrc = bar.getAttribute("src");
-
-        if (iconSrc === "https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_bars.svg") {
-            bar.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/7/7a/Font_Awesome_5_solid_xmark.svg");
-        } else {
-            bar.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_bars.svg");
-        }
-    }
-</script>
+        <!-- Navigation menu -->
+        <nav class="menu" id="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
     </header>
     
     <!-- Hero page -->

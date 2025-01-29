@@ -1,24 +1,18 @@
-// header
-const bar = document.getElementById("bar");
-const nav = document.getElementById("nav");
-
-bar.onclick = (e) => {
-    const icon = e.target.getAttribute("class")
-    if(icon == "fa-solid fa-bars"){
-        e.target.setAttribute("class","fa-solid fa-xmark")
-
-    }else{
-        e.target.setAttribute("class","fa-solid fa-bars")
-    }
-    nav.classList.toggle("showNav")
-}
 document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("bar").addEventListener("click", function () {
-        var mobileMenu = document.getElementById("mobileMenu");
-        if (mobileMenu.style.display === "block") {
-            mobileMenu.style.display = "none";
+    const bar = document.getElementById("bar");
+    const nav = document.getElementById("nav");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    bar.addEventListener("click", function (e) {
+        // Toggle the menu visibility
+        mobileMenu.classList.toggle("showNav");  // Use class instead of inline styles
+
+        // Toggle the icon
+        const icon = e.target.getAttribute("class");
+        if (icon === "fa-solid fa-bars") {
+            e.target.setAttribute("class", "fa-solid fa-xmark");
         } else {
-            mobileMenu.style.display = "block";
+            e.target.setAttribute("class", "fa-solid fa-bars");
         }
     });
 });

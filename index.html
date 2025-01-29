@@ -1,15 +1,73 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./commonStyle.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/aa7454d09f.js" crossorigin="anonymous"></script>
+            color: #007bff;
+        }
+
+        /* Hamburger Animation */
+        .mobile-menu-btn.active .menu-bar:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .mobile-menu-btn.active .menu-bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-btn.active .menu-bar:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+        /* Body Styling */
+        body {
+            margin: 0;
+            min-height: 200vh;
+        }
+    </style>
 </head>
 <body>
+    <!-- Hamburger Menu Button -->
+    <button class="mobile-menu-btn" id="menuBtn">
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+    </button>
 
+    <!-- Mobile Menu -->
+    <nav class="mobile-menu" id="mobileMenu">
+        <ul class="menu-list">
+            <li><a href="https://www.home.com">Home</a></li>
+            <li><a href="https://www.ab.com">About Us</a></li>
+            <li><a href="https://www.bn.cv">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        // Toggle menu
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            menuBtn.classList.toggle('active');
+        });
+
+        // Close menu when clicking links
+        document.querySelectorAll('.menu-list a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                menuBtn.classList.remove('active');
+                // Navigate to link normally (same tab)
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!event.target.closest('.mobile-menu') && 
+                !event.target.closest('.mobile-menu-btn')) {
+                mobileMenu.classList.remove('active');
+                menuBtn.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
     <!-- Header -->
     <header>
         <div id="logo">
@@ -43,16 +101,15 @@
     <section class="hero gridSection">
         <div class="sectionDesc">
             <h1 class="headline">
-                Most popular way to trade <span class="cryptoText">CRYPTO</span>.
+                Best way to start Earning High with<span class="cryptoText">CRYPTO INVESTMENT</span>.
             </h1>
             <p class="sub-headline">
-                You can see a record of all your transactions 
-                anytime you want and never have to worry about 
-                someone erasing or stealing your money!
-            </p>
+                 Secure Your Financial Future with Our High-Yield A.I
+                 Investment Firm. Earn Massive Profits with Our A
+                 Powered Trading/Investments
             <div class="btnContainer">
                 <button class="btn btn1">Contact Now</button>
-                <button class="btn btn2">play video <i class="fa-solid fa-play"></i></button>
+                <button class="btn btn2">Loginplay video <i class="fa-solid fa-play"></i></button>
             </div>
         </div>
         <div class="sectionPic bouncepic" id="sectionPic">
@@ -66,7 +123,7 @@
             <div class="eachCarousel eachCarouselBorder">
                 <img src="./img/bitcoin-icon.png" alt="">
                 <article class="carouselDesc">
-                    <h1 class="carouselTitle">Bitcoin</h1>
+                    <h1 class="carouselTitle">Starter Plan</h1>
                     <p class="carouselPara">Bitcoin is an innovative payment network</p>
                     <div class="carouselPrice">
                         <h3>$34,000</h3>
@@ -81,11 +138,11 @@
                 <img src="./img/ethereum-icon.png" alt="">
                 <article class="carouselDesc">
                     <h1 class="carouselTitle">Ethereum</h1>
-                    <p class="carouselPara">Ethereum is open-source blockchain currency</p>
+                    <p class="carouselPara">$26/R467</p>
                     <div class="carouselPrice">
-                        <h3>$25,600</h3>
+                        <h3>2Hrs Profit $57.20</h3>
                         <span class="rect"></span>
-                        <h3 class="carouselDiscount">9%</h3>
+                        <h3 class="carouselDiscount">6Hrs Profit $67.60</h3>
                     </div>
                     <button class="btn carouselBtn">Buy & Trade</button>
                 </article>

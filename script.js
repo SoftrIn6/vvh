@@ -12,7 +12,16 @@ bar.onclick = (e) => {
     }
     nav.classList.toggle("showNav")
 }
-
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("bar").addEventListener("click", function () {
+        var mobileMenu = document.getElementById("mobileMenu");
+        if (mobileMenu.style.display === "block") {
+            mobileMenu.style.display = "none";
+        } else {
+            mobileMenu.style.display = "block";
+        }
+    });
+});
 
 // carousel
 const carouselContainer = document.querySelector(".carouselContainer");

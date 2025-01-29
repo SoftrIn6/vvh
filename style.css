@@ -24,7 +24,7 @@ body {
     color: var(--white);
 }
 
-/* Header */
+/* Default for larger screens */
 header {
     width: 90%;
     max-width: 1200px;
@@ -39,6 +39,7 @@ header {
     color: var(--white);
     font-size: 1.5rem;
     cursor: pointer;
+    display: none; /* Hide for larger screens */
 }
 
 /* Sidebar Navigation */
@@ -59,24 +60,93 @@ header {
     z-index: 2;
 }
 
-/* Add class to toggle menu visibility */
-.showNav {
+.nav.showNav {
     width: 250px;
     padding: 2em 1em;
 }
 
-/* Mobile Dropdown Menu */
-.mobile-nav {
-    display: none;
-    position: absolute;
-    top: 60px;
-    right: 10px;
-    background: #333;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    z-index: 1000;
+.nav-link {
+    font-size: 1rem;
+    width: 100%;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    white-space: nowrap;
 }
+
+.nav-link a {
+    color: var(--white);
+}
+
+/* Mobile Navigation Menu */
+.mobile-nav {
+    display: none; /* Hide by default */
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    padding-top: 60px;
+}
+
+.mobile-nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.mobile-nav ul li {
+    padding: 15px 0;
+}
+
+.mobile-nav.showNav {
+    display: block; /* Show on toggle */
+}
+
+@media (max-width: 768px) {
+    /* Hide desktop navigation */
+    .nav {
+        display: none;
+    }
+
+    /* Show hamburger icon */
+    #barContainer {
+        display: block;
+    }
+
+    /* Show the mobile menu */
+    .mobile-nav.showNav {
+        display: block;
+    }
+
+    .mobile-nav ul li a {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    /* Desktop navigation */
+    .nav {
+        position: relative;
+        width: auto;
+        background-color: transparent;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-right: 5%;
+    }
+    .nav-link {
+        margin-right: 2em;
+    }
+    .navLogo, #barContainer, .sociallinkContainer {
+        display: none;
+    }
+}
+
 
 @media (min-width: 768px) {  
     /* Hide the mobile menu on bigger screens */

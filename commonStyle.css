@@ -68,9 +68,17 @@ p {
 }
 
 @keyframes bounce {
-    0% { transform: translateY(-30px); }
-    50% { transform: translateY(30px); }
-    100% { transform: translateY(-30px); }
+    0% {
+        transform: translateY(-30px);
+    }
+
+    50% {
+        transform: translateY(30px);
+    }
+
+    100% {
+        transform: translateY(-30px);
+    }
 }
 
 .bouncepic img {
@@ -105,51 +113,66 @@ p {
 }
 
 /* Mobile Menu Styles */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #nav {
+    display: flex;
+    gap: 2em;
+    list-style: none;
+    padding-left: 0;
+}
+
+#nav li {
+    list-style: none;
+}
+
+#nav .sociallinkContainer {
+    display: flex;
+    gap: 1em;
+}
+
+#barContainer {
     display: none;
-    background-color: #333;
-    color: white;
-    padding: 1em;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100%;
-    text-align: center;
-}
-
-#nav.showNav {
-    display: block;
-}
-
-/* Styles for the hamburger icon */
-#bar {
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-}
-
-#nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#nav ul li {
-    margin: 1em 0;
-}
-
-#nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
 }
 
 @media (max-width: 768px) {
-    /* Hide the nav by default */
+    /* Hide the navigation by default on mobile */
     #nav {
         display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--darkblue);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 1em;
+        text-align: center;
     }
 
-    #bar {
-        display: block;  /* Show the hamburger icon */
+    #barContainer {
+        display: block;
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
+    }
+
+    #nav.showNav {
+        display: block;  /* Show the menu when toggled */
+    }
+
+    #nav a {
+        color: white;
+        text-decoration: none;
+        padding: 0.5em;
+    }
+
+    /* Make the social media icons appear below the nav items */
+    #nav .sociallinkContainer {
+        margin-top: 1em;
+        justify-content: center;
     }
 }

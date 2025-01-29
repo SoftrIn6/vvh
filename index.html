@@ -46,9 +46,27 @@
 
 <!-- Mobile Menu Toggle Button -->
 <div id="barContainer">
-    <!-- Use the provided image as the mobile button -->
-    <img id="bar" src="https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_bars.svg" alt="Menu" />
+    <!-- Use the provided image as the mobile button, with onClick directly in HTML -->
+    <img id="bar" src="https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_bars.svg" alt="Menu" onClick="toggleMenu()" />
 </div>
+
+<script>
+    function toggleMenu() {
+        // Toggle the mobile menu visibility
+        const mobileMenu = document.getElementById("mobileMenu");
+        mobileMenu.classList.toggle("showNav");
+
+        // Toggle the icon
+        const bar = document.getElementById("bar");
+        const iconSrc = bar.getAttribute("src");
+
+        if (iconSrc === "https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_bars.svg") {
+            bar.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/7/7a/Font_Awesome_5_solid_xmark.svg");
+        } else {
+            bar.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_bars.svg");
+        }
+    }
+</script>
     </header>
     
     <!-- Hero page -->

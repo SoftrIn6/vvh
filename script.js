@@ -1,18 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
     const bar = document.getElementById("bar");
-    const nav = document.getElementById("nav");
     const mobileMenu = document.getElementById("mobileMenu");
 
     bar.addEventListener("click", function (e) {
         // Toggle the menu visibility
-        mobileMenu.classList.toggle("showNav");  // Use class instead of inline styles
+        mobileMenu.classList.toggle("showNav");  // Show/Hide mobile menu
 
-        // Toggle the icon
-        const icon = e.target.getAttribute("class");
-        if (icon === "fa-solid fa-bars") {
-            e.target.setAttribute("class", "fa-solid fa-xmark");
+        // Toggle the icon by switching the image
+        const iconSrc = e.target.getAttribute("src");
+        if (iconSrc === "https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_bars.svg") {
+            e.target.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/7/7a/Font_Awesome_5_solid_xmark.svg");
         } else {
-            e.target.setAttribute("class", "fa-solid fa-bars");
+            e.target.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_bars.svg");
         }
     });
 });

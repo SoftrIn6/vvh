@@ -2,14 +2,10 @@
 const bar = document.getElementById("bar");
 const nav = document.getElementById("nav");
 
-bar.onclick = (e) => {
-    const icon = e.target.getAttribute("class");
-    if (icon === "fa-solid fa-bars") {
-        e.target.setAttribute("class", "fa-solid fa-xmark");
-    } else {
-        e.target.setAttribute("class", "fa-solid fa-bars");
-    }
+bar.onclick = () => {
     nav.classList.toggle("showNav");
+    const icon = bar.classList.contains("fa-bars") ? "fa-xmark" : "fa-bars";
+    bar.setAttribute("class", `fa-solid ${icon}`);
 }
 
 // Carousel functionality (kept as is)

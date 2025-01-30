@@ -201,8 +201,8 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    font-size: 1px;
+    width: 0%;
+    font-size: 0.5rem;
     margin-bottom: 0em;
 }
 

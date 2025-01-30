@@ -198,11 +198,11 @@ header{
 
 .carouselPrice{
     color: var(--darkblue);
-    display: flex;
+    display: grid;
     justify-content: space-between;
     align-items: center;
-    width: 20%;
-    margin-bottom: 1em;
+    width: 90%;
+    margin-bottom: 0em;
 }
 
 .carouselDiscount{

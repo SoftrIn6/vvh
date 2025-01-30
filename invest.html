@@ -209,14 +209,13 @@
     
     <section>
     <div class="carouselContainer">
-        <div class="eachCarousel eachCarouselBorder">
+        <div class="eachCarousel">
             <img src="./img/bitcoin-icon.png" alt="">
             <article class="carouselDesc">
                 <h1 class="carouselTitle">Starter Plan</h1>
                 <p class="carouselPara">Plan Price: $26/R467</p>
                 <div class="carouselPrice">
-                    <h3>2Hours Profit: $57/
-                     6Hours Profit: $67</h3>
+                    <h3>2Hours Profit: $57 / 6Hours Profit: $67</h3>
                 </div>
                 <button class="btn carouselBtn">Buy Plan</button>
             </article>
@@ -226,10 +225,9 @@
             <img src="./img/ethereum-icon.png" alt="">
             <article class="carouselDesc">
                 <h1 class="carouselTitle">Advance Plan</h1>
-                <p class="carouselPara">Plan Price: $​76/R1,363</p>
+                <p class="carouselPara">Plan Price: $76/R1,363</p>
                 <div class="carouselPrice">
-                    <h3>2Hours Profit:$​167/
-                     6Hours Profit:$​197</h3>
+                    <h3>2Hours Profit: $167 / 6Hours Profit: $197</h3>
                 </div>
                 <button class="btn carouselBtn">Buy Plan</button>
             </article>
@@ -239,10 +237,9 @@
             <img src="./img/tether-icon.png" alt="">
             <article class="carouselDesc">
                 <h1 class="carouselTitle">Pro Plan</h1>
-               <p class="carouselPara">Plan Price: $185/​R3363</p>
+                <p class="carouselPara">Plan Price: $185/R3363</p>
                 <div class="carouselPrice">
-                    <h3>2Hours Profit:$407/
-                     6Hours Profit:$481</h3>
+                    <h3>2Hours Profit: $407 / 6Hours Profit: $481</h3>
                 </div>
                 <button class="btn carouselBtn">Buy Plan</button>
             </article>
@@ -254,8 +251,7 @@
                 <h1 class="carouselTitle">Expert Plan</h1>
                 <p class="carouselPara">Plan Price: $240/R4340</p>
                 <div class="carouselPrice">
-                    <h3>2Hours Profit:$​528/
-                     6Hours Profit:$​624</h3>
+                    <h3>2Hours Profit: $528 / 6Hours Profit: $624</h3>
                 </div>
                 <button class="btn carouselBtn">Buy Plan</button>
             </article>
@@ -267,8 +263,7 @@
                 <h1 class="carouselTitle">Max Plan</h1>
                 <p class="carouselPara">Plan Price: $1,006/R18657</p>
                 <div class="carouselPrice">
-                    <h3>2Hours Profit:$2006/
-                     6Hours Profit:$6006</h3>
+                    <h3>2Hours Profit: $2006 / 6Hours Profit: $6006</h3>
                 </div>
                 <button class="btn carouselBtn">Buy Plan</button>
             </article>
@@ -276,11 +271,11 @@
 
         <div class="eachCarousel">
             <img src="./img/tether-icon.png" alt="">
-           <article class="carouselDesc">
+            <article class="carouselDesc">
                 <h1 class="carouselTitle">Custom Plan</h1>
                 <p class="carouselPara">Plan Price: $10 To $10,000</p>
                 <div class="carouselPrice">
-                    <h3>Profit:$57 Upto $900007</h3>
+                    <h3>Profit: $57 Up to $900007</h3>
                 </div>
                 <button class="btn carouselBtn">Custom Plan</button>
             </article>
@@ -290,56 +285,57 @@
 
 <style>
     .carouselContainer {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    gap: 20px; /* Space between items */
-    justify-content: center;
-    padding: 20px;
-}
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+        gap: 20px; /* Space between items */
+        justify-content: center;
+        padding: 20px;
+    }
 
-.eachCarousel {
-    background-color: #f5f5f5; /* Light background */
-    border-radius: 16px; /* Rounded corners */
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
-}
+    .eachCarousel {
+        background-color: #f5f5f5; /* Light background */
+        border-radius: 16px; /* Rounded corners */
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    }
 
-.eachCarousel img {
-    width: 50px; /* Adjust image size */
-    height: 50px;
-    margin-bottom: 10px;
-}
+    .eachCarousel img {
+        width: 50px; /* Adjust image size */
+        height: 50px;
+        margin-bottom: 10px;
+    }
 
-.carouselTitle {
-    font-size: 18px;
-    font-weight: bold;
-}
+    .carouselTitle {
+        font-size: 18px;
+        font-weight: bold;
+    }
 
-.carouselPara {
-    font-size: 14px;
-    color: #333;
-}
+    .carouselPara {
+        font-size: 14px;
+        color: #333;
+    }
 
-.carouselPrice h3 {
-    font-weight: bold;
-}
+    .carouselPrice h3 {
+        font-weight: bold;
+    }
 
-.carouselBtn {
-    background-color: #5b6ee1; /* Button color */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px; /* Fully rounded button */
-    cursor: pointer;
-    transition: 0.3s;
-}
+    .carouselBtn {
+        background-color: #5b6ee1; /* Button color */
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 20px; /* Fully rounded button */
+        cursor: pointer;
+        transition: 0.3s;
+    }
 
-.carouselBtn:hover {
-    background-color: #3e50d4;
-}
+    .carouselBtn:hover {
+        background-color: #3e50d4;
+    }
+</style>
 
-
+    
 
     <!-- footer -->
     <footer>

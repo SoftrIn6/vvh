@@ -161,7 +161,25 @@
 
             <li class="nav-link"><a href="./index.html">Home</a></li>
             <li class="nav-link"><a href="./aboutus.html">About Us</a></li>
-            <li class="nav-link"><a href="./contact.html">Contact</a></li>
+            <li class="nav-link"><a href="./invest.html">Invest</a></li>
+            <li class="nav-link"><a href="./review.html">Reviews</a></li>
+            <li class="nav-link"><a href="./contact.html">Contact Us</a></li>
+            <li class="nav-link">
+            <li class="nav-link">
+    <a href="#" onclick="toggleSubMenu(event)">User Account</a>
+    <ul class="sub-menu" style="display: none;">
+        <li><a href="https://www.softrinvestment.online/user-profile">Go to my Profile</a></li>
+        <li><a href="https://www.softrinvestment.online/my-wallet">Go to My Wallet</a></li>
+    </ul>
+</li>
+
+<script>
+    function toggleSubMenu(event) {
+        event.preventDefault();
+        const subMenu = event.target.nextElementSibling;
+        subMenu.style.display = subMenu.style.display === 'none' ? 'block' : 'none';
+    }
+</script>
             <li class="sociallinkContainer">
                 <img class="sociallink" src="./img/fabook-icon-white.svg" alt="">
                 <img class="sociallink" src="./img/twitter-icon-white.svg" alt="">
